@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "todos.apps.Todosfig",
+    "todos.apps.TodosConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
