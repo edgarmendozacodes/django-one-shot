@@ -11,24 +11,27 @@
   <body>
     <main>
       <header></header>
-      <div><h1>My Lists</h1></div>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Number of Items</th>
-          </tr>
-        </thead>
+      <div>
+        <h1>My Lists</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number of Items</th>
+            </tr>
+          </thead>
 
-        <tbody>
-          {% for todo in todo_list.todos.all %}
-          <tr>
-            <td>{{ todo.name }}</td>
-            <td>{{ todo.number_of_items }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+          <tbody>
+            {% for todo in todo_list %}
+            <tr>
+              <td>{{ todo.name }}</td>
+              <td>{{ todo.number_of_items }}</td>
+              {% comment %} # from views.py todo_list # {% endcomment %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </main>
   </body>
 
